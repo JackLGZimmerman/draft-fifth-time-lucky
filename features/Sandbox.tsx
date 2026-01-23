@@ -16,7 +16,7 @@ function Sandbox() {
               <div />
               <div />
             </div>
-            <div className="flex h-full w-full flex-2 items-stretch justify-between">
+            <div className="flex h-full w-full flex-3 items-stretch justify-between">
               <div className="w-16 bg-zinc-500 riot-roles" />
               <div className="flex-1 flex flex-col">
                 <div className="flex bg-zinc-600 h-2/3 champion-options"></div>
