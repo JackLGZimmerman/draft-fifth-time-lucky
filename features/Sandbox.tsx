@@ -1,0 +1,37 @@
+function Sandbox() {
+  return (
+    <main className="p-4 h-full">
+      <div className="h-340 w-full rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-950">
+        <div className="flex h-full flex-col *:bg-zinc-100 *:rounded-xl gap-4">
+          <div className="h-42 w-full"></div>
+          <div className="flex h-full gap-4 p-4 *:bg-zinc-200">
+            <div className="flex flex-1 flex-col rounded-l-xl *:flex-1 *:bg-zinc-400 p-4 *:rounded-lg gap-4">
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+            </div>
+            <div className="flex h-full w-full flex-2 items-stretch justify-between">
+              <div className="w-16 bg-zinc-500" />
+              <div className="flex-1 flex flex-col">
+                <div className="flex bg-zinc-600 h-2/3"></div>
+                <div className="flex bg-zinc-700 h-16"></div>
+              </div>
+              <div className="w-16 bg-zinc-500" />
+            </div>
+            <div className="flex flex-1 flex-col rounded-r-xl *:flex-1 *:bg-zinc-400 p-4 *:rounded-lg gap-4">
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  );
+}
+
+export default Sandbox;
