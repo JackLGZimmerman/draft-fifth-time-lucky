@@ -28,6 +28,14 @@ async function getChampionMappings<
   );
 }
 
+async function getChampionIds<
+  T extends { id: number; name: string }
+>(
+  championsSummary: Record<string, T>
+): Promise<number[]> {
+  return Object.values(championsSummary).map(champ => champ.id);
+}
+
 const commands = {
   championMappings: async () => {
     const summary = await fetchSummary<ChampionSummary>();
