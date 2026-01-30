@@ -1,14 +1,39 @@
-function fetchLandscapeImages() {
-  return 0;
+import { CDRAGON, DDRAGON, DDRAGON_VERSIONS_URL } from './constants'
+
+function fetchCenteredImages() {
+
 }
 
-function fetchSquareImages() {
-  return 0;
+async function fetchTileImages() {
+
+}
+
+function fetchPortraitImages() {
+
+}
+
+
+
+async function fetchPatch(): Promise<string[]> {
+  const response = await fetch(DDRAGON_VERSIONS_URL)
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch patches: ${response.status}`)
+  }
+
+  const data: string[] = await response.json()
+  return data
+}
+
+async function getLatestVersion(): Promise<string> {
+  const versions = await fetchPatch()
+  return versions[0]
 }
 
 const commands = {
-  landscape: fetchLandscapeImages,
-  square: fetchSquareImages,
+  portrait: fetchPortraitImages,
+  tile: fetchTileImages,
+  centered: fetchCenteredImages
 };
 
 const cmd = process.argv[2];
